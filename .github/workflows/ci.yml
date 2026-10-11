@@ -1,0 +1,55 @@
+name: macOS checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  swift:
+    runs-on: macos-15
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Run the complete conversion suite
+        run: bash scripts/test.sh
+      - name: Build the local app
+        run: bash scripts/build.sh
+      - name: Build the sandbox preview
+        run: bash scripts/build.sh --sandbox
+      - name: Check whitespace
+        run: git diff --check
+
+  xcode:
+    runs-on: macos-15
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - scheme: HEIC to JPG
+            configuration: Release
+          - scheme: HEIC to JPG App Store
+            configuration: AppStore
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Build Xcode project without signing credentials
+        env:
+          APP_SCHEME: ${{ matrix.scheme }}
+          APP_CONFIGURATION: ${{ matrix.configuration }}
+        run: >-
+          xcodebuild -project HEICToJPG.xcodeproj
+          -scheme "$APP_SCHEME" -configuration "$APP_CONFIGURATION"
+          -destination 'generic/platform=macOS'
+          -derivedDataPath .build/xcode CODE_SIGNING_ALLOWED=NO build
