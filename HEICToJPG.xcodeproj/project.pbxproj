@@ -1,0 +1,50 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+		B39BBDFAE593E266A69B98B0 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/HEICToJPG/Application.swift"; sourceTree = "<group>"; };
+		52039454F918A0673FAD0CAA = { isa = PBXBuildFile; fileRef = B39BBDFAE593E266A69B98B0; };
+		9727B9EED8ACD2EE46E136A0 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/HEICToJPG/ContentView.swift"; sourceTree = "<group>"; };
+		B4A081ADAD6BFF6324356F4F = { isa = PBXBuildFile; fileRef = 9727B9EED8ACD2EE46E136A0; };
+		5AE677C2AE656B4C70C628F7 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/HEICToJPG/ConversionModel.swift"; sourceTree = "<group>"; };
+		B4DB8FF80DF6D42AB993D6D0 = { isa = PBXBuildFile; fileRef = 5AE677C2AE656B4C70C628F7; };
+		FC6D287DEC3A19DF65248EAE = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/HEICToJPG/FolderAccessController.swift"; sourceTree = "<group>"; };
+		D618DA8DE2AB494453BEFC47 = { isa = PBXBuildFile; fileRef = FC6D287DEC3A19DF65248EAE; };
+		28AAD1477D5182D66D4B03B3 = { isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Resources/Assets.xcassets"; sourceTree = "<group>"; };
+		26B2A637F7DC4079D5AB78A5 = { isa = PBXFileReference; lastKnownFileType = text.xml; path = "Resources/PrivacyInfo.xcprivacy"; sourceTree = "<group>"; };
+		7B594B6DB375E1BF3F23CDD6 = { isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Resources/Info.plist"; sourceTree = "<group>"; };
+		9CCC84FB14787F2D710D2C6A = { isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Resources/AppStore.entitlements"; sourceTree = "<group>"; };
+		1B316C2A61BC07AD2926E500 = { isa = PBXBuildFile; fileRef = 28AAD1477D5182D66D4B03B3; };
+		85485ABDDFC5AA715BEE5C09 = { isa = PBXBuildFile; fileRef = 26B2A637F7DC4079D5AB78A5; };
+		7E30F4446729AA3E2345056F = { isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Configuration/Common.xcconfig"; sourceTree = "<group>"; };
+		5B424A9F7E1FCF903BE9B322 = { isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Configuration/Version.xcconfig"; sourceTree = "<group>"; };
+		379FFAE098E1FE30EF2E6AF6 = { isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Configuration/Debug.xcconfig"; sourceTree = "<group>"; };
+		77ED3959B0A4E0420C48D19C = { isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Configuration/Release.xcconfig"; sourceTree = "<group>"; };
+		8A3B2E665FED81182DD26376 = { isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Configuration/AppStore.xcconfig"; sourceTree = "<group>"; };
+		7D1043473D55BFA90E8530D3 = { isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HEIC to JPG.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EB56BE3C2D93CDAB0C52E67 = { isa = PBXGroup; children = (B39BBDFAE593E266A69B98B0, 9727B9EED8ACD2EE46E136A0, 5AE677C2AE656B4C70C628F7, FC6D287DEC3A19DF65248EAE,); name = App; sourceTree = "<group>"; };
+		87DF60DE337FB58864343E39 = { isa = PBXGroup; children = (28AAD1477D5182D66D4B03B3, 26B2A637F7DC4079D5AB78A5, 7B594B6DB375E1BF3F23CDD6, 9CCC84FB14787F2D710D2C6A,); name = Resources; sourceTree = "<group>"; };
+		754164850F38C1ECDAF6B8ED = { isa = PBXGroup; children = (7E30F4446729AA3E2345056F, 5B424A9F7E1FCF903BE9B322, 379FFAE098E1FE30EF2E6AF6, 77ED3959B0A4E0420C48D19C, 8A3B2E665FED81182DD26376,); name = Configuration; sourceTree = "<group>"; };
+		FE0A091FDBFB3E9C31B7A1BD = { isa = PBXGroup; children = (7D1043473D55BFA90E8530D3,); name = Products; sourceTree = "<group>"; };
+		62BCE9422FF2D14F69AB80A1 = { isa = PBXGroup; children = (2EB56BE3C2D93CDAB0C52E67, 87DF60DE337FB58864343E39, 754164850F38C1ECDAF6B8ED, FE0A091FDBFB3E9C31B7A1BD,); sourceTree = "<group>"; };
+		EEFA2ADC05792F5C1C1A6481 = { isa = XCLocalSwiftPackageReference; relativePath = .; };
+		EA281641D145F2D9F91A3FA8 = { isa = XCSwiftPackageProductDependency; package = EEFA2ADC05792F5C1C1A6481; productName = ConversionCore; };
+		57725CDA03D140AC16E11B84 = { isa = PBXBuildFile; productRef = EA281641D145F2D9F91A3FA8; };
+		B769D05EDBD1B52CD529AAC6 = { isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (52039454F918A0673FAD0CAA, B4A081ADAD6BFF6324356F4F, B4DB8FF80DF6D42AB993D6D0, D618DA8DE2AB494453BEFC47,); runOnlyForDeploymentPostprocessing = 0; };
+		AF5E7CDBDF7172932AC06F32 = { isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (1B316C2A61BC07AD2926E500, 85485ABDDFC5AA715BEE5C09,); runOnlyForDeploymentPostprocessing = 0; };
+		D69A6D9C25105E0495EF97BD = { isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (57725CDA03D140AC16E11B84,); runOnlyForDeploymentPostprocessing = 0; };
+		75BB3D5A44EA88B6630AB580 = { isa = XCBuildConfiguration; baseConfigurationReference = 379FFAE098E1FE30EF2E6AF6; buildSettings = { }; name = Debug; };
+		BFD315016DE16320F7E2120C = { isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; SDKROOT = macosx; }; name = Debug; };
+		78E9FF212122B0C0397A6DB4 = { isa = XCBuildConfiguration; baseConfigurationReference = 77ED3959B0A4E0420C48D19C; buildSettings = { }; name = Release; };
+		1D8C0C6B1D22EA8C7669B263 = { isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; SDKROOT = macosx; }; name = Release; };
+		17357BC2274165BAF4BC65B2 = { isa = XCBuildConfiguration; baseConfigurationReference = 8A3B2E665FED81182DD26376; buildSettings = { }; name = AppStore; };
+		B80891CE47EA6FFE7459DFAC = { isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; SDKROOT = macosx; }; name = AppStore; };
+		E31BA15CC04B0F0B923553D1 = { isa = XCConfigurationList; buildConfigurations = (75BB3D5A44EA88B6630AB580, 78E9FF212122B0C0397A6DB4, 17357BC2274165BAF4BC65B2,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		314425BAD361EE8153704C56 = { isa = XCConfigurationList; buildConfigurations = (BFD315016DE16320F7E2120C, 1D8C0C6B1D22EA8C7669B263, B80891CE47EA6FFE7459DFAC,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		61AD50A9B9189CC3CF187456 = { isa = PBXNativeTarget; buildConfigurationList = E31BA15CC04B0F0B923553D1; buildPhases = (B769D05EDBD1B52CD529AAC6, D69A6D9C25105E0495EF97BD, AF5E7CDBDF7172932AC06F32,); buildRules = (); dependencies = (); name = HEICToJPG; packageProductDependencies = (EA281641D145F2D9F91A3FA8,); productName = "HEIC to JPG"; productReference = 7D1043473D55BFA90E8530D3; productType = "com.apple.product-type.application"; };
+		F6F4DA8D93E88A08220E03B7 = { isa = PBXProject; attributes = { BuildIndependentTargetsInParallel = YES; LastUpgradeCheck = 2620; TargetAttributes = { 61AD50A9B9189CC3CF187456 = { CreatedOnToolsVersion = 26.2; }; }; }; buildConfigurationList = 314425BAD361EE8153704C56; compatibilityVersion = "Xcode 14.0"; developmentRegion = en; hasScannedForEncodings = 0; knownRegions = (en, Base,); mainGroup = 62BCE9422FF2D14F69AB80A1; packageReferences = (EEFA2ADC05792F5C1C1A6481,); productRefGroup = FE0A091FDBFB3E9C31B7A1BD; projectDirPath = ""; projectRoot = ""; targets = (61AD50A9B9189CC3CF187456,); };
+	};
+	rootObject = F6F4DA8D93E88A08220E03B7;
+}
